@@ -1,0 +1,6 @@
+com\regine\persistence\User.class
+com\regine\action\UserAction.class
+com\regine\hibernate\HibernateServlet.class
+com\regine\form\UserForm.class
+com\regine\dao\UserDAO.class
+com\regine\hibernate\HibernateUtil.class

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.regine.persistence.User" table="USER">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="50" not-null="false" />
+        </property>
+        <property name="age" type="java.lang.Integer">
+            <column name="AGE" not-null="false"/>
+        </property>
+    </class>
+</hibernate-mapping>

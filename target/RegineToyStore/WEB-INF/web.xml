@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Archetype Created Web Application</display-name>
+ <jsp-config>
+        <taglib>
+            <taglib-uri>http://jakarta.apache.org/struts/tags-bean</taglib-uri>
+            <taglib-location>/WEB-INF/tld/struts-bean.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>http://jakarta.apache.org/struts/tags-html</taglib-uri>
+            <taglib-location>/WEB-INF/tld/struts-html.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>http://jakarta.apache.org/struts/tags-logic</taglib-uri>
+            <taglib-location>/WEB-INF/tld/struts-logic.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+    <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>/WEB-INF/classes/struts-config.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+    
+    <listener>
+        <listener-class>com.regine.hibernate.HibernateServlet</listener-class>
+    </listener>
+    
+    <welcome-file-list>
+        <welcome-file>user/index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
